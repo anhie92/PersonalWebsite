@@ -1,5 +1,6 @@
+
 body {
-    background-color: black;
+    background-color: white;
     margin: 0;
 }
 
@@ -37,44 +38,129 @@ nav ul li a:hover {
     background: grey;
 }
 
-section {
-    height: 75vh;
-    border: 2px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.About-Div, .Portfolio-Div, .Home-Div {
-    max-width: 1000px;
+/* Global */
+.content-container {
+    max-width: 800px;
     width: 95%;
     margin: 0 auto;
+    padding: 20px 0;
 }
-#Home{
-    background-color: grey;
-    font-family: fantasy;
-    color:darkorange;
+.btn {
+    padding: 5px 20px;
+    border: 1px solid white;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
 }
-#About{
-    background-color: black;
-    font-family: fantasy;
-    color: rgb(200, 101, 14);
+.btn:hover {
+    background: white;
+    color: black;
 }
-#Portfolio{
-    background-color: grey;
-    font-family: fantasy;
-    color:darkorange;
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 35, 82, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:1;
+}
+h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+}
+h2 {
+    font-size: 30px;
+}
+#portfolio h2{
+    text-align: center;
 }
 
 
-.Portfolio-Div a:hover {
-    background: grey;
+/* //Home */
+.Home-Div {
+    background-image: url(./images/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.Home-Div .content {
+    padding: 15em 0;
+    color: white;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.Home-content .content-container {
+    text-align: center;
 }
 
 /* About Section */
 
+.about-div {
+    background-image: url(./images/detroit.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.about-div .content {
+    text-align: center;
+    padding: 200px 0;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+
+.overlap-info {
+    margin-top: -75px;
+    background: white;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 0 5px 2px rgba(0 0 0 / 75%);
+    padding: 40px;
+}
+.about-content {
+    padding-bottom: 40px;
+}
+.about-content h2 {
+    margin-top: 40px;
+    text-align: center;
+}
 .list-of-my-hobbies {
     list-style-type: none;
+    margin-bottom: -20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.list-of-my-hobbies li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 50%;
+}
+.list-of-my-hobbies li svg {
+    width: 40px;
+    height: 40px;
+}
+.list-of-my-hobbies li svg path {
+    fill: rgb(232, 13, 13);
+}
+.list-of-my-hobbies li span {
+    text-transform: capitalize;
+    margin-left: 40px;
 }
 .list-of-projects {
     display: flex;
@@ -84,18 +170,48 @@ section {
     flex: 1 50%;
 }
 
+.contact-section{
+    background-color: #ccc;
+    padding:20px 0 ;
+    text-align: center;
+}
+.contact-section p{
+    font-size: 25px;
+}
+
 /* Footer Styles */
 footer {
     text-align: center;
     background: #000;
     padding: 10px;
+    
+}
+footer a{
+    color: transparent;
 }
 footer svg{
     width: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 footer svg path {
     fill: aqua;
 }
 footer a:hover svg path {
     fill: white;
+}
+
+.portfolio-div {
+    background-image: url(./images/portfolio_banner.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.portfolio-div .content {
+    padding: 200px 0;
+    color: white;
+    position: relative;
+    z-index: 2;
+    text-align: center;
 }
